@@ -30,7 +30,7 @@ const LUARE_CONFIG = {
   // 問い合わせ・フォーム設定
   urls: {
     // 卸取引（法人・店舗様向け）お問合せフォーム URL
-    businessContactForm: "https://forms.google.com/", // TODO: 卸取引専用GoogleフォームURLをセット
+    businessContactForm: "https://docs.google.com/forms/d/e/1FAIpQLScrBAoYuO1JAtrjkQ5HbtF66qOEiT8IQh1QDYThbLdnRyGLGw/viewform",
 
     // 一般のお客様向けお問合せフォーム URL
     customerContactForm: "https://forms.google.com/", // TODO: 一般お問い合わせ用GoogleフォームURLをセット
