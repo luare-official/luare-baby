@@ -1,0 +1,1065 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap');
+
+/* ==========================================================================
+   Design System & Base Tokens
+   ========================================================================== */
+:root {
+  /* Harmonious Neutral Palette */
+  --bg-primary: #FAF8F5;       /* Warm Soft Ivory */
+  --bg-secondary: #F4F1EA;     /* Soft Greige Warmth */
+  --bg-surface: #FFFFFF;       /* Clean Off-White */
+  
+  --text-main: #2C2B28;        /* Deep Charcoal Grey */
+  --text-muted: #6E6D67;       /* Muted Warm Grey */
+  --text-light: #94928C;       /* Soft Light Grey */
+  
+  --accent-soft: #E5E0D6;      /* Subtle Neutral Border/Highlight */
+  --accent-hover: #D6D0C3;     /* Hover State Neutral */
+  --border-light: #E8E4DC;     /* Fine Subtly Warm Border */
+  --border-dark: #2C2B28;      /* Primary Accent Border */
+
+  /* Typography Families */
+  --font-serif: 'Marcellus', 'Times New Roman', serif;
+  --font-sans-en: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  --font-sans-jp: 'Zen Kaku Gothic New', "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+
+  /* Layout Spacing */
+  --max-width: 1200px;
+  --max-width-narrow: 800px;
+  --header-height: 80px;
+}
+
+/* ==========================================================================
+   Reset & Fundamental Rules
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: var(--font-sans-jp);
+  font-weight: 300;
+  line-height: 1.85;
+  letter-spacing: 0.05em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   Typography Helpers
+   ========================================================================== */
+.font-en-serif {
+  font-family: var(--font-serif);
+  letter-spacing: 0.12em;
+}
+
+.font-en-sans {
+  font-family: var(--font-sans-en);
+  letter-spacing: 0.08em;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title-en {
+  font-family: var(--font-sans-en);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.section-title-jp {
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: var(--text-main);
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background-color: rgba(250, 248, 245, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(232, 228, 220, 0.6);
+  transition: background-color 0.3s ease;
+}
+
+.header-container {
+  max-width: var(--max-width);
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: var(--text-main);
+  text-transform: uppercase;
+}
+
+.logo span {
+  font-size: 1.1rem;
+  font-weight: 300;
+  display: inline-block;
+  margin-left: 0.2rem;
+}
+
+.nav-desktop {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.nav-link {
+  font-family: var(--font-sans-en);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-main);
+  position: relative;
+  padding: 0.25rem 0;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: var(--text-main);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.nav-business {
+  padding: 0.35rem 0.85rem;
+  border: 1px solid var(--border-dark);
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link.nav-business::after {
+  display: none;
+}
+
+.nav-link.nav-business:hover {
+  background-color: var(--text-main);
+  color: var(--bg-primary);
+}
+
+/* Mobile Hamburger Button */
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 16px;
+  z-index: 1002;
+}
+
+.hamburger-btn span {
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-main);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger-btn.active span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.hamburger-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-btn.active span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* Mobile Navigation Overlay */
+.nav-mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-primary);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.nav-mobile-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nav-mobile-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-mobile-list .nav-link {
+  font-size: 0.95rem;
+  letter-spacing: 0.25em;
+}
+
+/* ==========================================================================
+   Buttons & CTAs
+   ========================================================================== */
+.btn-primary {
+  display: inline-block;
+  padding: 1.1rem 2.8rem;
+  background-color: var(--text-main);
+  color: var(--bg-primary);
+  font-family: var(--font-sans-jp);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  border: 1px solid var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--text-main);
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 1.1rem 2.8rem;
+  background-color: transparent;
+  color: var(--text-main);
+  font-family: var(--font-sans-jp);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  border: 1px solid var(--border-dark);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+}
+
+.btn-secondary:hover {
+  background-color: var(--text-main);
+  color: var(--bg-primary);
+}
+
+/* ==========================================================================
+   Section 1: HERO
+   ========================================================================== */
+.hero-section {
+  padding-top: calc(var(--header-height) + 3rem);
+  padding-bottom: 6rem;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-container {
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.hero-image-wrapper {
+  max-width: 1000px;
+  margin: 0 auto 3.5rem;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  max-height: 650px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero-brand {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  letter-spacing: 0.25em;
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+}
+
+.hero-copy {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.9;
+  letter-spacing: 0.15em;
+  color: var(--text-main);
+}
+
+/* ==========================================================================
+   Section 2: ABOUT LUARE BABY
+   ========================================================================== */
+.about-section {
+  padding: 8rem 2rem;
+  background-color: var(--bg-secondary);
+}
+
+.about-container {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-lead {
+  font-size: 1.35rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  margin-bottom: 2.5rem;
+  color: var(--text-main);
+}
+
+.about-text {
+  font-size: 0.95rem;
+  line-height: 2.2;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Section 3: PRODUCTS
+   ========================================================================== */
+.products-section {
+  padding: 9rem 2rem;
+}
+
+.products-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.product-meta-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.product-title {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.product-subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.product-price {
+  font-family: var(--font-sans-en);
+  font-size: 1.15rem;
+  letter-spacing: 0.1em;
+  color: var(--text-main);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.5rem;
+  margin-bottom: 5rem;
+}
+
+.product-card {
+  text-align: center;
+}
+
+.product-image-box {
+  background-color: var(--bg-surface);
+  padding: 2.5rem;
+  border: 1px solid var(--border-light);
+  margin-bottom: 1.5rem;
+}
+
+.product-image-box img {
+  width: 100%;
+  height: 420px;
+  object-fit: contain;
+}
+
+.product-design-name {
+  font-family: var(--font-sans-en);
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.product-design-jp {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+/* Product Specifications List */
+.product-specs {
+  max-width: 700px;
+  margin: 0 auto 4rem;
+  padding: 3rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+}
+
+.product-specs-title {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  row-gap: 1.2rem;
+  font-size: 0.9rem;
+}
+
+.specs-label {
+  color: var(--text-muted);
+}
+
+.specs-value {
+  color: var(--text-main);
+}
+
+.product-cta-wrapper {
+  text-align: center;
+}
+
+/* ==========================================================================
+   Section 4: SAFETY & QUALITY
+   ========================================================================== */
+.safety-section {
+  padding: 9rem 2rem;
+  background-color: var(--bg-secondary);
+}
+
+.safety-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.safety-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.safety-card {
+  background-color: var(--bg-surface);
+  padding: 3.5rem 2.5rem;
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+}
+
+.safety-num {
+  font-family: var(--font-sans-en);
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+.safety-card-title-en {
+  font-family: var(--font-sans-en);
+  font-size: 1.1rem;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+
+.safety-card-title-jp {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-bottom: 1.8rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.safety-card-desc {
+  font-size: 0.875rem;
+  line-height: 2;
+  color: var(--text-muted);
+}
+
+.safety-list {
+  margin-top: 1.2rem;
+}
+
+.safety-list li {
+  font-size: 0.85rem;
+  color: var(--text-main);
+  padding-left: 1.2rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.safety-list li::before {
+  content: '・';
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Section 5: USE / LIFESTYLE
+   ========================================================================== */
+.lifestyle-section {
+  padding: 7rem 2rem;
+}
+
+.lifestyle-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.lifestyle-image-box {
+  margin-bottom: 3.5rem;
+}
+
+.lifestyle-image-box img {
+  width: 100%;
+  max-height: 650px;
+  object-fit: cover;
+}
+
+.lifestyle-copy-en {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  margin-bottom: 0.8rem;
+}
+
+.lifestyle-copy-jp {
+  font-size: 1.15rem;
+  letter-spacing: 0.12em;
+  color: var(--text-main);
+}
+
+/* ==========================================================================
+   Section 6: STOCKISTS / WHERE TO BUY
+   ========================================================================== */
+.stockists-section {
+  padding: 8rem 2rem;
+  background-color: var(--bg-secondary);
+}
+
+.stockists-container {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.stockists-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.stockist-item {
+  background-color: var(--bg-surface);
+  padding: 2.5rem;
+  border: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: border-color 0.3s ease;
+}
+
+.stockist-item:hover {
+  border-color: var(--border-dark);
+}
+
+.stockist-info {
+  text-align: left;
+}
+
+.stockist-name {
+  font-family: var(--font-sans-en);
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.2rem;
+}
+
+.stockist-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Section 7: FOR BUSINESS (TOP Teaser)
+   ========================================================================== */
+.business-teaser-section {
+  padding: 9rem 2rem;
+}
+
+.business-teaser-container {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid var(--border-light);
+  padding: 5rem 3rem;
+  background-color: var(--bg-surface);
+}
+
+.business-teaser-title {
+  font-family: var(--font-sans-en);
+  font-size: 0.85rem;
+  letter-spacing: 0.25em;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.business-teaser-subtitle {
+  font-size: 1.35rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+}
+
+.business-teaser-text {
+  font-size: 0.95rem;
+  line-height: 2.1;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+}
+
+/* ==========================================================================
+   Section 8 & 9: Footer & Company Link
+   ========================================================================== */
+.site-footer {
+  background-color: #242321;
+  color: #D6D3CC;
+  padding: 6rem 2rem 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-brand {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  letter-spacing: 0.15em;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.footer-tagline {
+  font-size: 0.85rem;
+  color: #A3A097;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.footer-company-info {
+  font-size: 0.8rem;
+  color: #8C8982;
+  line-height: 1.7;
+}
+
+.footer-nav-title {
+  font-family: var(--font-sans-en);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: #FFFFFF;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.footer-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-nav-list a {
+  font-size: 0.85rem;
+  color: #A3A097;
+  transition: color 0.3s ease;
+}
+
+.footer-nav-list a:hover {
+  color: #FFFFFF;
+}
+
+.footer-bottom {
+  max-width: var(--max-width);
+  margin: 2.5rem auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: #75726C;
+}
+
+/* ==========================================================================
+   Page Specific Styles: FOR BUSINESS (business.html)
+   ========================================================================== */
+.page-header {
+  padding-top: calc(var(--header-height) + 5rem);
+  padding-bottom: 5rem;
+  background-color: var(--bg-secondary);
+  text-align: center;
+}
+
+.page-title-en {
+  font-family: var(--font-sans-en);
+  font-size: 0.875rem;
+  letter-spacing: 0.3em;
+  color: var(--text-muted);
+  margin-bottom: 0.8rem;
+}
+
+.page-title-jp {
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+}
+
+.page-intro-text {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  line-height: 2.1;
+  color: var(--text-muted);
+}
+
+.business-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.business-feature-card {
+  background-color: var(--bg-surface);
+  padding: 2.5rem;
+  border: 1px solid var(--border-light);
+}
+
+.business-feature-title {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+  color: var(--text-main);
+}
+
+.business-feature-desc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.9;
+}
+
+/* Workflow Steps */
+.workflow-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.workflow-step-item {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  padding: 1.8rem 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.step-number {
+  font-family: var(--font-sans-en);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  color: var(--text-light);
+  white-space: nowrap;
+}
+
+.step-title {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-main);
+}
+
+/* Package Notice Box */
+.notice-box {
+  background-color: var(--bg-secondary);
+  border-left: 2px solid var(--text-muted);
+  padding: 1.2rem 1.8rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 2rem;
+}
+
+/* ==========================================================================
+   Page Specific Styles: COMPANY (company.html)
+   ========================================================================== */
+.company-table-container {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  padding: 3rem;
+}
+
+.company-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.company-table th, .company-table td {
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid var(--border-light);
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.company-table tr:last-child th, .company-table tr:last-child td {
+  border-bottom: none;
+}
+
+.company-table th {
+  width: 180px;
+  font-weight: 400;
+  color: var(--text-muted);
+  vertical-align: top;
+}
+
+.company-table td {
+  color: var(--text-main);
+  line-height: 1.9;
+}
+
+.business-list li {
+  margin-bottom: 0.4rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.business-list li::before {
+  content: '・';
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Page Specific Styles: CONTACT (contact.html)
+   ========================================================================== */
+.contact-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-hub-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  padding: 4rem 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-hub-title {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.contact-hub-desc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  line-height: 1.9;
+}
+
+/* ==========================================================================
+   Animations & Transitions
+   ========================================================================== */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   Responsive Media Queries (Mobile First & Tablet Overrides)
+   ========================================================================== */
+@media (max-width: 992px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .safety-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .business-features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-hub-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 70px;
+  }
+
+  .nav-desktop {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .hero-copy {
+    font-size: 1.25rem;
+  }
+
+  .about-lead {
+    font-size: 1.15rem;
+  }
+
+  .product-specs {
+    padding: 2rem 1.5rem;
+  }
+
+  .specs-grid {
+    grid-template-columns: 100px 1fr;
+  }
+
+  .business-teaser-container {
+    padding: 3rem 1.5rem;
+  }
+
+  .workflow-step-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 1.5rem;
+  }
+
+  .company-table-container {
+    padding: 1.5rem;
+  }
+
+  .company-table th {
+    width: 110px;
+  }
+}

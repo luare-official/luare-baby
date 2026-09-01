@@ -1,0 +1,81 @@
+/**
+ * Luare baby 公式サイト 設定ファイル
+ * 後から各種URLや会社情報を変更する場合は、このファイルを編集してください。
+ */
+
+const LUARE_CONFIG = {
+  // ブランド情報
+  brand: {
+    name: "Luare baby",
+    fullName: "ルアレベビー",
+    domain: "baby.luare-consulting.com",
+    tagline: "小さな毎日に、やさしいものを。",
+  },
+
+  // 商品情報
+  product: {
+    name: "Luare baby Silicone Bib",
+    nameJapanese: "シリコンビブ",
+    price: 1980,
+    priceFormatted: "1,980円（税込）",
+    designs: [
+      { id: "bear", name: "クマ柄", englishName: "Bear" },
+      { id: "rabbit", name: "ウサギ柄", englishName: "Rabbit" }
+    ],
+    // 一般消費者向け購入リンク (現時点ではAmazon)
+    // 自社ECや他モールへ変更する場合はここを書き換えてください
+    purchaseUrl: "https://www.amazon.co.jp/", // TODO: 正しいAmazon商品URLに差し替えてください
+  },
+
+  // 問い合わせ・フォーム設定
+  urls: {
+    // 卸取引（法人・店舗様向け）お問合せフォーム URL
+    businessContactForm: "https://forms.google.com/", // TODO: 卸取引専用GoogleフォームURLをセット
+
+    // 一般のお客様向けお問合せフォーム URL
+    customerContactForm: "https://forms.google.com/", // TODO: 一般お問い合わせ用GoogleフォームURLをセット
+  },
+
+  // 取扱店（WHERE TO BUY）一覧設定
+  stockists: [
+    {
+      name: "Amazon Official Store",
+      type: "Online Store",
+      description: "公式オンライン販売",
+      url: "https://www.amazon.co.jp/", // TODO: AmazonストアURL
+      isPrimary: true,
+    },
+    /* 
+    // 将来的に追加される取扱店例：
+    {
+      name: "楽天市場",
+      type: "Online Store",
+      description: "公式ショップ（準備中）",
+      url: "#",
+      isPrimary: false,
+    },
+    */
+  ],
+
+  // 運営会社情報（株式会社Luare Consulting）
+  company: {
+    name: "株式会社Luare Consulting",
+    nameEnglish: "Luare Consulting Inc.",
+    businesses: [
+      "ベビー・キッズ用品の企画・開発・販売・卸売",
+      "ブランド事業の企画・運営",
+      "海外企業の日本市場参入・事業立ち上げ支援",
+      "会計・経営管理領域におけるコンサルティング",
+      "内部統制・業務プロセス構築支援"
+    ],
+    // 以下の情報は確定後に設定してください
+    location: "東京都（詳細情報は後日更新予定）",
+    representative: "代表取締役 （後日更新予定）",
+    established: "（後日更新予定）",
+  }
+};
+
+// グローバル展開
+if (typeof window !== 'undefined') {
+  window.LUARE_CONFIG = LUARE_CONFIG;
+}
