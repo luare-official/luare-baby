@@ -9,7 +9,7 @@ const LUARE_CONFIG = {
     name: "Luare baby",
     fullName: "ルアレベビー",
     domain: "baby.luare-consulting.com",
-    tagline: "小さな毎日に、やさしいものを。",
+    tagline: "かわいさと使いやすさを、毎日の食卓に。",
   },
 
   // 商品情報
