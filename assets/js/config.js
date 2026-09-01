@@ -24,7 +24,7 @@ const LUARE_CONFIG = {
     ],
     // 一般消費者向け購入リンク (現時点ではAmazon)
     // 自社ECや他モールへ変更する場合はここを書き換えてください
-    purchaseUrl: "https://www.amazon.co.jp/", // TODO: 正しいAmazon商品URLに差し替えてください
+    purchaseUrl: "https://www.amazon.co.jp/Luare-%E3%83%AB%E3%82%A2%E3%83%AC%E3%80%90%E3%83%89%E3%82%A4%E3%83%84%E5%AE%89%E5%85%A8%E5%9F%BA%E6%BA%96%E5%90%88%E6%A0%BC%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%80%91-%E3%82%B7%E3%83%AA%E3%82%B3%E3%83%B3%E3%83%93%E3%83%96-%E3%82%B7%E3%83%AA%E3%82%B3%E3%83%B3%E3%82%B9%E3%82%BF%E3%82%A4-%E3%81%8A%E9%A3%9F%E4%BA%8B%E3%82%A8%E3%83%97%E3%83%AD%E3%83%B3/dp/B0DRGWNV1Y?th=1",
   },
 
   // 問い合わせ・フォーム設定
@@ -42,7 +42,7 @@ const LUARE_CONFIG = {
       name: "Amazon Official Store",
       type: "Online Store",
       description: "公式オンライン販売",
-      url: "https://www.amazon.co.jp/", // TODO: AmazonストアURL
+      url: "https://www.amazon.co.jp/Luare-%E3%83%AB%E3%82%A2%E3%83%AC%E3%80%90%E3%83%89%E3%82%A4%E3%83%84%E5%AE%89%E5%85%A8%E5%9F%BA%E6%BA%96%E5%90%88%E6%A0%BC%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%80%91-%E3%82%B7%E3%83%AA%E3%82%B3%E3%83%B3%E3%83%93%E3%83%96-%E3%82%B7%E3%83%AA%E3%82%B3%E3%83%B3%E3%82%B9%E3%82%BF%E3%82%A4-%E3%81%8A%E9%A3%9F%E4%BA%8B%E3%82%A8%E3%83%97%E3%83%AD%E3%83%B3/dp/B0DRGWNV1Y?th=1",
       isPrimary: true,
     },
     /* 
