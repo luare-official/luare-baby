@@ -1153,6 +1153,21 @@ button {
   display: block;
 }
 
+.sgs-user-material-img {
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.sgs-user-material-img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
 .footer-logo-img {
   height: 72px;
   width: auto;
