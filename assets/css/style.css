@@ -145,26 +145,22 @@ button {
 }
 
 .logo {
-  font-family: var(--font-brand);
-  font-size: 1.7rem;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  color: var(--text-main);
-  text-transform: none;
   display: inline-flex;
-  align-items: baseline;
-  gap: 0.35rem;
+  align-items: center;
   text-decoration: none;
 }
 
-.logo span {
-  font-size: 1.35rem;
-  font-weight: 300;
-  font-style: italic;
-  color: var(--text-muted);
-  letter-spacing: 0.05em;
-  display: inline-block;
-  margin-left: 0;
+.logo-img {
+  height: 48px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  transition: opacity 0.3s ease;
+}
+
+.logo:hover .logo-img {
+  opacity: 0.82;
 }
 
 .nav-desktop {
@@ -1153,24 +1149,22 @@ button {
 }
 
 .footer-brand {
-  font-family: var(--font-brand);
-  font-size: 1.95rem;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  color: #FFFFFF;
-  margin-bottom: 0.8rem;
-  text-transform: none;
-  display: flex;
-  align-items: baseline;
-  gap: 0.4rem;
+  margin-bottom: 1.2rem;
+  display: block;
 }
 
-.footer-brand span {
-  font-size: 1.5rem;
-  font-weight: 300;
-  font-style: italic;
-  color: #A3A097;
-  letter-spacing: 0.05em;
+.footer-logo-img {
+  height: 48px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.95;
+  transition: opacity 0.3s ease;
+}
+
+.footer-logo-img:hover {
+  opacity: 1;
 }
 
 .footer-tagline {
@@ -1183,13 +1177,25 @@ button {
 .footer-company-info {
   font-size: 0.8rem;
   color: #8C8982;
-  line-height: 1.8;
+  line-height: 1.85;
+}
+
+.footer-company-info p {
+  word-break: break-all;
+  overflow-wrap: anywhere;
 }
 
 .footer-company-info a {
   color: #A3A097;
   text-decoration: none;
   transition: color 0.3s ease;
+  word-break: break-all;
+  overflow-wrap: anywhere;
+}
+
+.footer-company-info a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
 }
 
 .footer-company-info a:hover {
@@ -1465,6 +1471,11 @@ button {
 @media (max-width: 768px) {
   :root {
     --header-height: 70px;
+  }
+
+  .logo-img, .footer-logo-img {
+    height: 38px;
+    max-width: 170px;
   }
 
   .nav-desktop {
