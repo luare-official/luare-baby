@@ -1155,16 +1155,17 @@ button {
 
 .sgs-user-material-img {
   width: 100%;
-  max-width: 480px;
+  max-width: 440px;
   height: auto;
   display: block;
-  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.08));
+  border-radius: 4px;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.08));
   transition: transform 0.4s ease, filter 0.4s ease;
 }
 
 .sgs-user-material-img:hover {
   transform: translateY(-4px);
-  filter: drop-shadow(0 16px 35px rgba(0, 0, 0, 0.12));
+  filter: drop-shadow(0 14px 32px rgba(0, 0, 0, 0.12));
 }
 
 .footer-logo-img {
