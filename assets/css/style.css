@@ -27,7 +27,7 @@
   /* Layout Spacing */
   --max-width: 1200px;
   --max-width-narrow: 800px;
-  --header-height: 80px;
+  --header-height: 95px;
 }
 
 /* ==========================================================================
@@ -151,9 +151,9 @@ button {
 }
 
 .logo-img {
-  height: 48px;
+  height: 68px;
   width: auto;
-  max-width: 220px;
+  max-width: 320px;
   object-fit: contain;
   mix-blend-mode: multiply;
   transition: opacity 0.3s ease;
@@ -1154,9 +1154,9 @@ button {
 }
 
 .footer-logo-img {
-  height: 48px;
+  height: 72px;
   width: auto;
-  max-width: 220px;
+  max-width: 340px;
   object-fit: contain;
   filter: brightness(0) invert(1);
   opacity: 0.95;
@@ -1470,12 +1470,17 @@ button {
 
 @media (max-width: 768px) {
   :root {
-    --header-height: 70px;
+    --header-height: 76px;
   }
 
-  .logo-img, .footer-logo-img {
-    height: 38px;
-    max-width: 170px;
+  .logo-img {
+    height: 48px;
+    max-width: 220px;
+  }
+
+  .footer-logo-img {
+    height: 52px;
+    max-width: 240px;
   }
 
   .nav-desktop {
