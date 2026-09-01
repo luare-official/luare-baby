@@ -16,8 +16,8 @@ const LUARE_CONFIG = {
   product: {
     name: "Luare baby Silicone Bib",
     nameJapanese: "シリコンビブ",
-    price: 1980,
-    priceFormatted: "1,980円（税込）",
+    price: 2200,
+    priceFormatted: "2,200円（税込）",
     designs: [
       { id: "bear", name: "クマ柄", englishName: "Bear" },
       { id: "rabbit", name: "ウサギ柄", englishName: "Rabbit" }
