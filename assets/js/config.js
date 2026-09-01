@@ -29,6 +29,9 @@ const LUARE_CONFIG = {
 
   // 問い合わせ・フォーム設定
   urls: {
+    // ブランド公式メールアドレス
+    email: "luarebaby@luare-consulting.com",
+
     // 卸取引（法人・店舗様向け）お問合せフォーム URL
     businessContactForm: "https://docs.google.com/forms/d/e/1FAIpQLScrBAoYuO1JAtrjkQ5HbtF66qOEiT8IQh1QDYThbLdnRyGLGw/viewform",
 
