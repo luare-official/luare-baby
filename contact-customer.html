@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CONTACT (お問い合わせ) | Luare baby</title>
-  <meta name="description" content="Luare baby（ルアレベビー）へのお問い合わせ。一般のお客様からのお問い合わせおよび法人・店舗様からの卸取引に関するご相談窓口。">
+  <title>一般のお客様 お問い合わせ | Luare baby</title>
+  <meta name="description" content="Luare baby（ルアレベビー）一般のお客様専用お問い合わせフォーム。商品やお手入れ方法に関するご質問、ご意見などはこちらからお問い合わせください。">
   
   <!-- OGP & Twitter Card Tags -->
-  <meta property="og:title" content="CONTACT | Luare baby">
-  <meta property="og:description" content="Luare baby（ルアレベビー）お問い合わせ窓口。一般のお客様および法人・店舗様からの卸取引に関するご相談。">
+  <meta property="og:title" content="一般のお客様 お問い合わせ | Luare baby">
+  <meta property="og:description" content="Luare baby（ルアレベビー）一般のお客様専用お問い合わせフォーム。">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://baby.luare-consulting.com/contact.html">
+  <meta property="og:url" content="https://baby.luare-consulting.com/contact-customer.html">
   <meta property="og:image" content="https://baby.luare-consulting.com/assets/images/hero/hero-bibs.jpg">
   <meta name="twitter:card" content="summary_large_image">
   
   <!-- Favicon & Canonical -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-  <link rel="canonical" href="https://baby.luare-consulting.com/contact.html">
+  <link rel="canonical" href="https://baby.luare-consulting.com/contact-customer.html">
   <link rel="stylesheet" href="assets/css/style.css">
 
   <!-- JSON-LD Structured Data -->
@@ -38,6 +38,12 @@
             "position": 2,
             "name": "CONTACT",
             "item": "https://baby.luare-consulting.com/contact.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "一般のお客様 お問い合わせ",
+            "item": "https://baby.luare-consulting.com/contact-customer.html"
           }
         ]
       }
@@ -88,38 +94,62 @@
     <!-- Page Header -->
     <section class="page-header">
       <div class="fade-in-up">
-        <p class="page-title-en">CONTACT</p>
-        <h1 class="page-title-jp">お問い合わせ</h1>
+        <p class="page-title-en">CUSTOMER CONTACT</p>
+        <h1 class="page-title-jp">一般のお客様 お問い合わせ</h1>
         <p class="page-intro-text">
-          お問い合わせ内容に合わせて、窓口をお選びください。
+          商品に関するご質問、お手入れ方法、ご意見などは下記フォームよりお問い合わせください。
         </p>
       </div>
     </section>
 
-    <!-- Contact Hub Grid -->
-    <section class="products-section" style="padding-top: 5rem; padding-bottom: 8rem;">
-      <div class="contact-hub-grid">
-        <!-- Customer Contact Card -->
-        <div class="contact-hub-card fade-in-up">
-          <div>
-            <h2 class="contact-hub-title">一般のお客様</h2>
-            <p class="contact-hub-desc">
-              商品に関するご質問、お手入れ方法、不具合やご意見などはこちらからお問い合わせください。
-            </p>
-          </div>
-          <a href="contact-customer.html" class="btn-primary js-customer-form-url">お問い合わせフォームへ</a>
-        </div>
+    <!-- General Customer Formspree Contact Form Section -->
+    <section class="products-section" style="padding-top: 3rem; padding-bottom: 8rem;">
+      <div class="contact-form-section fade-in-up" style="margin-top: 0;">
+        <p class="contact-form-subtitle" style="margin-top: 1rem;">必要事項をご入力のうえ、「送信する」ボタンを押してください。</p>
 
-        <!-- Wholesale / Business Contact Card (変更禁止：卸取引専用Googleフォーム) -->
-        <div class="contact-hub-card fade-in-up">
-          <div>
-            <h2 class="contact-hub-title">法人・店舗のお客様</h2>
-            <p class="contact-hub-desc">
-              新規取扱・卸取引のご相談、サンプルご希望、イベント等でのご活用に関するお問い合わせはこちらから承ります。
-            </p>
+        <!-- Formspree Endpoint Form -->
+        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="customer-contact-form">
+          <!-- Formspree Options -->
+          <input type="hidden" name="_subject" value="【Luare baby】一般のお客様からのお問い合わせ">
+          <input type="text" name="_gotcha" style="display:none">
+
+          <!-- 1. 氏名 (必須) -->
+          <div class="form-group">
+            <div class="form-label-wrapper">
+              <label for="name" class="form-label">お名前</label>
+              <span class="form-required-badge">必須</span>
+            </div>
+            <input type="text" id="name" name="name" class="form-input" placeholder="例）山田 太郎" required autocomplete="name">
           </div>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScrBAoYuO1JAtrjkQ5HbtF66qOEiT8IQh1QDYThbLdnRyGLGw/viewform" class="btn-primary js-business-form-url" target="_blank" rel="noopener noreferrer">卸取引専用フォームへ</a>
-        </div>
+
+          <!-- 2. メールアドレス (必須) -->
+          <div class="form-group">
+            <div class="form-label-wrapper">
+              <label for="email" class="form-label">メールアドレス</label>
+              <span class="form-required-badge">必須</span>
+            </div>
+            <input type="email" id="email" name="email" class="form-input" placeholder="例）example@example.com" required autocomplete="email">
+          </div>
+
+          <!-- 3. お問い合わせ内容 (必須) -->
+          <div class="form-group">
+            <div class="form-label-wrapper">
+              <label for="message" class="form-label">お問い合わせ内容</label>
+              <span class="form-required-badge">必須</span>
+            </div>
+            <textarea id="message" name="message" class="form-textarea" placeholder="お問い合わせ内容をご記入ください。" required></textarea>
+          </div>
+
+          <!-- 送信ボタン -->
+          <div class="form-submit-wrapper">
+            <button type="submit" class="btn-submit">送信する</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Back to Contact Hub Button -->
+      <div style="text-align: center; margin-top: 3.5rem;" class="fade-in-up">
+        <a href="contact.html" class="btn-secondary">窓口選択（CONTACT）へ戻る</a>
       </div>
     </section>
   </main>
