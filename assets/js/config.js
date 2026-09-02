@@ -35,8 +35,8 @@ const LUARE_CONFIG = {
     // 卸取引（法人・店舗様向け）お問合せフォーム URL
     businessContactForm: "https://docs.google.com/forms/d/e/1FAIpQLScrBAoYuO1JAtrjkQ5HbtF66qOEiT8IQh1QDYThbLdnRyGLGw/viewform",
 
-    // 一般のお客様向けお問合せフォーム (新設独立ページ: contact-customer.html)
-    customerContactForm: "contact-customer.html",
+    // 一般のお客様向けお問合せ mailto リンク（メールアプリ起動）
+    customerContactForm: "mailto:luarebaby@luare-consulting.com?subject=Luare%20baby%E3%81%B8%E3%81%AE%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B",
   },
 
   // 取扱店（WHERE TO BUY）一覧設定
