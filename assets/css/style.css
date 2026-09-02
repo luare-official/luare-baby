@@ -1441,6 +1441,41 @@ button {
   line-height: 1.9;
 }
 
+/* Customer Contact Action & Fallback Note */
+.customer-contact-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-fallback-note {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.fallback-note-text {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+  line-height: 1.6;
+}
+
+.fallback-email-link {
+  font-size: 0.85rem;
+  color: var(--text-main);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  word-break: break-all;
+  letter-spacing: 0.02em;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.fallback-email-link:hover {
+  color: var(--color-accent);
+  opacity: 0.85;
+}
+
 /* Customer Formspree Contact Form Styles */
 .contact-form-section {
   max-width: 720px;
