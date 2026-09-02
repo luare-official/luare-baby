@@ -1804,39 +1804,84 @@ button {
 
   /* SGS Report Section Mobile 1-Column Layout */
   .sgs-report-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 1.8rem 0.75rem;
-    margin-top: 2rem;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .sgs-report-stack-real {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    padding: 2rem 1.25rem !important;
+    margin-top: 2rem !important;
     width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    margin: 0 auto;
-  }
-
-  .sgs-headline {
-    font-size: 1.2rem;
-    line-height: 1.55;
-    margin-bottom: 1rem;
-    word-break: break-word;
+    box-sizing: border-box !important;
   }
 
   .sgs-report-info {
-    width: 100%;
+    width: 100% !important;
+    text-align: left !important;
   }
 
-  .sgs-user-material-img {
+  .sgs-issuer-title {
+    font-size: 0.8rem !important;
+    letter-spacing: 0.15em !important;
+    color: var(--text-muted) !important;
+    margin-bottom: 0.4rem !important;
+  }
+
+  .sgs-headline {
+    font-size: 1.25rem !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+    color: var(--text-main) !important;
+    margin-bottom: 1rem !important;
+    word-break: break-word !important;
+  }
+
+  .sgs-desc-text {
+    font-size: 0.9rem !important;
+    line-height: 1.85 !important;
+    color: var(--text-main) !important;
+    margin-bottom: 1.2rem !important;
+    word-break: break-word !important;
+  }
+
+  .sgs-items-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.65rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .sgs-item-row {
+    font-size: 0.875rem !important;
+    line-height: 1.6 !important;
+    color: var(--text-main) !important;
+  }
+
+  .sgs-report-stack-real {
+    position: relative !important;
     width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
-    display: block;
-    margin: 0 auto;
+    min-height: 0 !important;
+    margin: 0.5rem 0 1rem 0 !important;
+    display: block !important;
+  }
+
+  .sgs-user-material-img {
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+    transform: none !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+    border-radius: 4px !important;
+  }
+
+  .sgs-note-text {
+    font-size: 0.78rem !important;
+    line-height: 1.6 !important;
+    color: var(--text-light) !important;
+    margin-top: 0.5rem !important;
   }
 
   /* General Mobile Typography & Spacing Optimization */
