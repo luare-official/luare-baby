@@ -1415,17 +1415,30 @@ button {
   gap: 2.5rem;
   max-width: 900px;
   margin: 0 auto;
+  align-items: stretch;
 }
 
 .contact-hub-card {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-light);
-  padding: 4rem 3rem;
+  padding: 3.8rem 2.5rem 3.2rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.contact-card-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  min-height: 135px;
+  margin-bottom: 2rem;
 }
 
 .contact-hub-title {
@@ -1437,32 +1450,33 @@ button {
 .contact-hub-desc {
   font-size: 0.875rem;
   color: var(--text-muted);
-  margin-bottom: 2.5rem;
   line-height: 1.9;
+  margin-bottom: 0;
 }
 
-/* Customer Contact Action & Fallback Note */
-.customer-contact-action {
+.contact-card-footer {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  justify-content: flex-start;
 }
 
+/* Customer Contact Action & Fallback Note */
 .contact-fallback-note {
-  margin-top: 1.5rem;
+  margin-top: 1.25rem;
   text-align: center;
 }
 
 .fallback-note-text {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   color: var(--text-muted);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.3rem;
   line-height: 1.6;
 }
 
 .fallback-email-link {
-  font-size: 0.85rem;
+  font-size: 0.84rem;
   color: var(--text-main);
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -1682,5 +1696,19 @@ button {
 
   .company-table th {
     width: 110px;
+  }
+
+  .contact-hub-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-hub-card {
+    padding: 3rem 1.8rem 2.5rem;
+  }
+
+  .contact-card-header {
+    min-height: auto;
+    margin-bottom: 1.8rem;
   }
 }
