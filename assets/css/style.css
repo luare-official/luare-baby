@@ -1711,4 +1711,44 @@ button {
     min-height: auto;
     margin-bottom: 1.8rem;
   }
+
+  /* Smartphone Product Image Optimization (max-width: 768px / 767px) */
+  .products-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .products-container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+    margin-bottom: 3rem;
+  }
+
+  .product-card {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .product-image-box {
+    padding: 0.4rem;
+    height: auto;
+    min-height: 0;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+  }
+
+  .product-image-box img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    display: block;
+  }
 }
