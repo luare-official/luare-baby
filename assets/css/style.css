@@ -1751,4 +1751,107 @@ button {
     object-fit: contain;
     display: block;
   }
+
+  /* Smartphone Explanation Sections (Detail Section Rows & SGS Report) */
+  .detail-section-row,
+  .detail-section-row.reverse {
+    display: flex;
+    flex-direction: column;
+    direction: ltr;
+    gap: 1.8rem;
+    padding: 2.5rem 0;
+    width: 100%;
+  }
+
+  .detail-section-row.reverse > * {
+    direction: ltr;
+  }
+
+  .detail-section-content {
+    width: 100%;
+    text-align: left;
+  }
+
+  .detail-section-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+    word-break: break-word;
+  }
+
+  .detail-section-text {
+    font-size: 0.9rem;
+    line-height: 1.85;
+    color: var(--text-main);
+    word-break: break-word;
+  }
+
+  .detail-section-img-box {
+    width: 100%;
+    padding: 0.4rem;
+    box-sizing: border-box;
+  }
+
+  .detail-section-img-box img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* SGS Report Section Mobile 1-Column Layout */
+  .sgs-report-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.8rem 0.75rem;
+    margin-top: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .sgs-report-stack-real {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto;
+  }
+
+  .sgs-headline {
+    font-size: 1.2rem;
+    line-height: 1.55;
+    margin-bottom: 1rem;
+    word-break: break-word;
+  }
+
+  .sgs-report-info {
+    width: 100%;
+  }
+
+  .sgs-user-material-img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* General Mobile Typography & Spacing Optimization */
+  .section-title-jp {
+    font-size: 1.35rem;
+    line-height: 1.5;
+    word-break: break-word;
+  }
+
+  .product-intro-text,
+  .about-text {
+    font-size: 0.9rem;
+    line-height: 1.85;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
 }
