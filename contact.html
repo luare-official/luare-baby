@@ -96,21 +96,21 @@
       </div>
     </section>
 
-    <!-- Contact Hub Grid -->
-    <section class="products-section" style="padding-top: 5rem; padding-bottom: 8rem;">
+    <!-- Contact Hub Grid & Forms -->
+    <section class="products-section" style="padding-top: 4rem; padding-bottom: 8rem;">
       <div class="contact-hub-grid">
         <!-- Customer Contact Card -->
         <div class="contact-hub-card fade-in-up">
           <div>
             <h2 class="contact-hub-title">一般のお客様</h2>
             <p class="contact-hub-desc">
-              商品に関するご質問、お手入れ方法、不具合やご意見などはこちらからお問い合わせください。
+              商品に関するご質問、お手入れ方法、不具合やご意見などは、下記のお問い合わせフォームよりお気軽にご連絡ください。
             </p>
           </div>
-          <a href="#" class="btn-primary js-customer-form-url">お客様用フォームへ</a>
+          <a href="#customer-form" class="btn-primary">お問い合わせフォームへ</a>
         </div>
 
-        <!-- Wholesale / Business Contact Card -->
+        <!-- Wholesale / Business Contact Card (変更禁止：卸取引専用Googleフォーム) -->
         <div class="contact-hub-card fade-in-up">
           <div>
             <h2 class="contact-hub-title">法人・店舗のお客様</h2>
@@ -120,6 +120,51 @@
           </div>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLScrBAoYuO1JAtrjkQ5HbtF66qOEiT8IQh1QDYThbLdnRyGLGw/viewform" class="btn-primary js-business-form-url" target="_blank" rel="noopener noreferrer">卸取引専用フォームへ</a>
         </div>
+      </div>
+
+      <!-- General Customer Formspree Contact Form Section -->
+      <div id="customer-form" class="contact-form-section fade-in-up">
+        <h2 class="contact-form-title">一般のお客様 お問い合わせフォーム</h2>
+        <p class="contact-form-subtitle">必要事項をご入力のうえ、「送信する」ボタンを押してください。</p>
+
+        <!-- Formspree Endpoint Form -->
+        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="customer-contact-form">
+          <!-- Formspree Options -->
+          <input type="hidden" name="_subject" value="【Luare baby】一般のお客様からのお問い合わせ">
+          <input type="text" name="_gotcha" style="display:none">
+
+          <!-- 1. 氏名 (必須) -->
+          <div class="form-group">
+            <div class="form-label-wrapper">
+              <label for="name" class="form-label">お名前</label>
+              <span class="form-required-badge">必須</span>
+            </div>
+            <input type="text" id="name" name="name" class="form-input" placeholder="例）山田 太郎" required autocomplete="name">
+          </div>
+
+          <!-- 2. メールアドレス (必須) -->
+          <div class="form-group">
+            <div class="form-label-wrapper">
+              <label for="email" class="form-label">メールアドレス</label>
+              <span class="form-required-badge">必須</span>
+            </div>
+            <input type="email" id="email" name="email" class="form-input" placeholder="例）example@example.com" required autocomplete="email">
+          </div>
+
+          <!-- 3. お問い合わせ内容 (必須) -->
+          <div class="form-group">
+            <div class="form-label-wrapper">
+              <label for="message" class="form-label">お問い合わせ内容</label>
+              <span class="form-required-badge">必須</span>
+            </div>
+            <textarea id="message" name="message" class="form-textarea" placeholder="お問い合わせ内容をご記入ください。" required></textarea>
+          </div>
+
+          <!-- 送信ボタン -->
+          <div class="form-submit-wrapper">
+            <button type="submit" class="btn-submit">送信する</button>
+          </div>
+        </form>
       </div>
     </section>
   </main>

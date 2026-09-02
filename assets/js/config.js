@@ -35,8 +35,8 @@ const LUARE_CONFIG = {
     // 卸取引（法人・店舗様向け）お問合せフォーム URL
     businessContactForm: "https://docs.google.com/forms/d/e/1FAIpQLScrBAoYuO1JAtrjkQ5HbtF66qOEiT8IQh1QDYThbLdnRyGLGw/viewform",
 
-    // 一般のお客様向けお問合せフォーム URL
-    customerContactForm: "https://forms.google.com/", // TODO: 一般お問い合わせ用GoogleフォームURLをセット
+    // 一般のお客様向けお問合せフォーム (GitHub Pages + Formspree 連携: contact.html 内のフォーム)
+    customerContactForm: "contact.html#customer-form",
   },
 
   // 取扱店（WHERE TO BUY）一覧設定

@@ -66,9 +66,12 @@ function applyDynamicConfigValues() {
   const customerFormLinks = document.querySelectorAll('.js-customer-form-url');
   customerFormLinks.forEach(el => {
     if (LUARE_CONFIG.urls && LUARE_CONFIG.urls.customerContactForm) {
-      el.setAttribute('href', LUARE_CONFIG.urls.customerContactForm);
-      el.setAttribute('target', '_blank');
-      el.setAttribute('rel', 'noopener noreferrer');
+      const url = LUARE_CONFIG.urls.customerContactForm;
+      el.setAttribute('href', url);
+      if (url.startsWith('http://') || url.startsWith('https://')) {
+        el.setAttribute('target', '_blank');
+        el.setAttribute('rel', 'noopener noreferrer');
+      }
     }
   });
 }
